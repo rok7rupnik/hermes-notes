@@ -1,0 +1,33 @@
+<%= form_for(@storitev) do |f| %>
+  <% if @storitev.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@storitev.errors.count, "error") %> prohibited this storitev from being saved:</h2>
+
+      <ul>
+      <% @storitev.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :skupnaKolicina %><br>
+    <%= f.number_field :skupnaKolicina %>
+  </div>
+  <div class="field">
+    <%= f.label :cenaNaKos %><br>
+    <%= f.text_field :cenaNaKos %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br>
+    <%= f.text_field :opis %>
+  </div>
+  <div class="field">
+    <%= f.label :uporabnik_id %><br>
+    <%= f.text_field :uporabnik_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

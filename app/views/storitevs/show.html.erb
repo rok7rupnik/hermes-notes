@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Skupnakolicina:</strong>
+  <%= @storitev.skupnaKolicina %>
+</p>
+
+<p>
+  <strong>Cenanakos:</strong>
+  <%= @storitev.cenaNaKos %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @storitev.opis %>
+</p>
+
+<p>
+  <strong>Uporabnik:</strong>
+  <%= @storitev.uporabnik %>
+</p>
+
+<%= link_to 'Edit', edit_storitev_path(@storitev) %> |
+<%= link_to 'Back', storitevs_path %>

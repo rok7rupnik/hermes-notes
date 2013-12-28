@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails Hermes-notes: development" uuid="09187bd1-54cb-4a2a-b1bc-21cf3f89367c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails Hermes-notes: test" uuid="8a2b22ad-7594-4e36-9c3e-7e4876cc641f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails Hermes-notes: production" uuid="a96b4a55-1152-45a3-9e75-1ca5c5c3fae0">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

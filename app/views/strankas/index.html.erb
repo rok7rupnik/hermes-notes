@@ -1,0 +1,45 @@
+<h1>Listing strankas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ime</th>
+      <th>Priimek</th>
+      <th>Nazivpodjetja</th>
+      <th>Naslov</th>
+      <th>Email</th>
+      <th>Telefon</th>
+      <th>Davcna</th>
+      <th>Trr</th>
+      <th>Ddv</th>
+      <th>Posta</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @strankas.each do |stranka| %>
+      <tr>
+        <td><%= stranka.ime %></td>
+        <td><%= stranka.priimek %></td>
+        <td><%= stranka.nazivPodjetja %></td>
+        <td><%= stranka.naslov %></td>
+        <td><%= stranka.email %></td>
+        <td><%= stranka.telefon %></td>
+        <td><%= stranka.davcna %></td>
+        <td><%= stranka.trr %></td>
+        <td><%= stranka.ddv %></td>
+        <td><%= stranka.posta %></td>
+        <td><%= link_to 'Show', stranka %></td>
+        <td><%= link_to 'Edit', edit_stranka_path(stranka) %></td>
+        <td><%= link_to 'Destroy', stranka, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stranka', new_stranka_path %>

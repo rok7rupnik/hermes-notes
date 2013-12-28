@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zaporednaSt: 1
+  kolicina: 1
+  popust: 1.5
+  racun_id: 
+  storitev_id: 
+
+two:
+  zaporednaSt: 1
+  kolicina: 1
+  popust: 1.5
+  racun_id: 
+  storitev_id: 

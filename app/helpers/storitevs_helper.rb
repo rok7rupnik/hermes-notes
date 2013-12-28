@@ -1,0 +1,2 @@
+module StoritevsHelper
+end

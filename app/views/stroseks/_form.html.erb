@@ -1,0 +1,33 @@
+<%= form_for(@strosek) do |f| %>
+  <% if @strosek.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@strosek.errors.count, "error") %> prohibited this strosek from being saved:</h2>
+
+      <ul>
+      <% @strosek.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :datum %><br>
+    <%= f.date_select :datum %>
+  </div>
+  <div class="field">
+    <%= f.label :znesek %><br>
+    <%= f.text_field :znesek %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br>
+    <%= f.text_field :opis %>
+  </div>
+  <div class="field">
+    <%= f.label :uporabnik_id %><br>
+    <%= f.text_field :uporabnik_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

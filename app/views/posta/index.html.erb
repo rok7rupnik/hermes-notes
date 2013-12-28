@@ -1,0 +1,29 @@
+<h1>Listing posta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Postnast</th>
+      <th>Naziv</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posta.each do |postum| %>
+      <tr>
+        <td><%= postum.postnaSt %></td>
+        <td><%= postum.naziv %></td>
+        <td><%= link_to 'Show', postum %></td>
+        <td><%= link_to 'Edit', edit_postum_path(postum) %></td>
+        <td><%= link_to 'Destroy', postum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Posta', new_postum_path %>

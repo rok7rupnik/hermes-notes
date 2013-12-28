@@ -1,0 +1,20 @@
+<h1>Registracija novega uporabnika</h1>
+
+<% @page_title = "Registracija | Hermes-notes" %>
+<div class="prijava_div">
+  <%= form_for(:uporabnik, :url => {:controller => 'uporabniks', :action => 'create'}) do |f| %>
+      <p> Email:</p> <%= f.text_field :email%>
+      <p> Geslo:</p> <%= f.password_field :geslo%>
+      <p> Potrdi geslo:</p> <%= f.password_field :geslo_confirmation%> <br/>
+      <%= f.submit :Registracija %>
+  <% end %>
+  <% if @uporabnik.errors.any? %>
+      <ul class="center error">
+        <% for message_error in @uporabnik.errors.full_messages %>
+            <li>* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>
+
+<%= link_to 'Back', uporabniks_path %>

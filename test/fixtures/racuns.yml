@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  datum: 2013-12-26
+  znesek: 1.5
+  uporabnik_id: 
+  stranka_id: 
+
+two:
+  datum: 2013-12-26
+  znesek: 1.5
+  uporabnik_id: 
+  stranka_id: 

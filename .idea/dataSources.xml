@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3691884450">
+    <data-source source="LOCAL" name="Rails Hermes-notes: development" uuid="09187bd1-54cb-4a2a-b1bc-21cf3f89367c">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Hermes-notes_development</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dff8dfc5dfc1dff8dfdfdfdadfc4dfc3dfc1dff5dff9dffa</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Hermes-notes: test" uuid="8a2b22ad-7594-4e36-9c3e-7e4876cc641f">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Hermes-notes_test</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Hermes-notes: production" uuid="a96b4a55-1152-45a3-9e75-1ca5c5c3fae0">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Hermes-notes_production</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

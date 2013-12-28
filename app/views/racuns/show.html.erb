@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @racun.datum %>
+</p>
+
+<p>
+  <strong>Znesek:</strong>
+  <%= @racun.znesek %>
+</p>
+
+<p>
+  <strong>Uporabnik:</strong>
+  <%= @racun.uporabnik %>
+</p>
+
+<p>
+  <strong>Stranka:</strong>
+  <%= @racun.stranka %>
+</p>
+
+<%= link_to 'Edit', edit_racun_path(@racun) %> |
+<%= link_to 'Back', racuns_path %>

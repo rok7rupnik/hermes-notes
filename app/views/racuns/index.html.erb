@@ -1,0 +1,33 @@
+<h1>Listing racuns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datum</th>
+      <th>Znesek</th>
+      <th>Uporabnik</th>
+      <th>Stranka</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @racuns.each do |racun| %>
+      <tr>
+        <td><%= racun.datum %></td>
+        <td><%= racun.znesek %></td>
+        <td><%= racun.uporabnik %></td>
+        <td><%= racun.stranka %></td>
+        <td><%= link_to 'Show', racun %></td>
+        <td><%= link_to 'Edit', edit_racun_path(racun) %></td>
+        <td><%= link_to 'Destroy', racun, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Racun', new_racun_path %>

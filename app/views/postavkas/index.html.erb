@@ -1,0 +1,35 @@
+<h1>Listing postavkas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zaporednast</th>
+      <th>Kolicina</th>
+      <th>Popust</th>
+      <th>Racun</th>
+      <th>Storitev</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @postavkas.each do |postavka| %>
+      <tr>
+        <td><%= postavka.zaporednaSt %></td>
+        <td><%= postavka.kolicina %></td>
+        <td><%= postavka.popust %></td>
+        <td><%= postavka.racun %></td>
+        <td><%= postavka.storitev %></td>
+        <td><%= link_to 'Show', postavka %></td>
+        <td><%= link_to 'Edit', edit_postavka_path(postavka) %></td>
+        <td><%= link_to 'Destroy', postavka, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Postavka', new_postavka_path %>

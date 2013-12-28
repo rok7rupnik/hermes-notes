@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Zaporednast:</strong>
+  <%= @postavka.zaporednaSt %>
+</p>
+
+<p>
+  <strong>Kolicina:</strong>
+  <%= @postavka.kolicina %>
+</p>
+
+<p>
+  <strong>Popust:</strong>
+  <%= @postavka.popust %>
+</p>
+
+<p>
+  <strong>Racun:</strong>
+  <%= @postavka.racun %>
+</p>
+
+<p>
+  <strong>Storitev:</strong>
+  <%= @postavka.storitev %>
+</p>
+
+<%= link_to 'Edit', edit_postavka_path(@postavka) %> |
+<%= link_to 'Back', postavkas_path %>

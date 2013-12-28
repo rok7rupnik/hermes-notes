@@ -1,0 +1,2 @@
+module PostavkasHelper
+end

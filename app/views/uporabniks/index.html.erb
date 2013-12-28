@@ -1,0 +1,47 @@
+<h1>Listing uporabniks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ime</th>
+      <th>Priimek</th>
+      <th>Nazivpodjetja</th>
+      <th>Naslov</th>
+      <th>Email</th>
+      <th>Telefon</th>
+      <th>Davcna</th>
+      <th>Trr</th>
+      <th>Ddv</th>
+      <th>Geslo</th>
+      <th>Posta</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uporabniks.each do |uporabnik| %>
+      <tr>
+        <td><%= uporabnik.ime %></td>
+        <td><%= uporabnik.priimek %></td>
+        <td><%= uporabnik.nazivPodjetja %></td>
+        <td><%= uporabnik.naslov %></td>
+        <td><%= uporabnik.email %></td>
+        <td><%= uporabnik.telefon %></td>
+        <td><%= uporabnik.davcna %></td>
+        <td><%= uporabnik.trr %></td>
+        <td><%= uporabnik.ddv %></td>
+        <td><%= uporabnik.geslo %></td>
+        <td><%= uporabnik.posta %></td>
+        <td><%= link_to 'Show', uporabnik %></td>
+        <td><%= link_to 'Edit', edit_uporabnik_path(uporabnik) %></td>
+        <td><%= link_to 'Destroy', uporabnik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Uporabnik', new_uporabnik_path %>

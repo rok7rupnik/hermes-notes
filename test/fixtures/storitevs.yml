@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  skupnaKolicina: 1
+  cenaNaKos: 1.5
+  opis: MyString
+  uporabnik_id: 
+
+two:
+  skupnaKolicina: 1
+  cenaNaKos: 1.5
+  opis: MyString
+  uporabnik_id: 

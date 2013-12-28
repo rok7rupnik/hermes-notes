@@ -1,0 +1,37 @@
+<%= form_for(@postavka) do |f| %>
+  <% if @postavka.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postavka.errors.count, "error") %> prohibited this postavka from being saved:</h2>
+
+      <ul>
+      <% @postavka.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :zaporednaSt %><br>
+    <%= f.number_field :zaporednaSt %>
+  </div>
+  <div class="field">
+    <%= f.label :kolicina %><br>
+    <%= f.number_field :kolicina %>
+  </div>
+  <div class="field">
+    <%= f.label :popust %><br>
+    <%= f.text_field :popust %>
+  </div>
+  <div class="field">
+    <%= f.label :racun_id %><br>
+    <%= f.text_field :racun_id %>
+  </div>
+  <div class="field">
+    <%= f.label :storitev_id %><br>
+    <%= f.text_field :storitev_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

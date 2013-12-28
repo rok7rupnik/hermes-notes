@@ -1,0 +1,33 @@
+<h1>Listing stroseks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Datum</th>
+      <th>Znesek</th>
+      <th>Opis</th>
+      <th>Uporabnik</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stroseks.each do |strosek| %>
+      <tr>
+        <td><%= strosek.datum %></td>
+        <td><%= strosek.znesek %></td>
+        <td><%= strosek.opis %></td>
+        <td><%= strosek.uporabnik %></td>
+        <td><%= link_to 'Show', strosek %></td>
+        <td><%= link_to 'Edit', edit_strosek_path(strosek) %></td>
+        <td><%= link_to 'Destroy', strosek, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Strosek', new_strosek_path %>

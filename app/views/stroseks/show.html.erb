@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @strosek.datum %>
+</p>
+
+<p>
+  <strong>Znesek:</strong>
+  <%= @strosek.znesek %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @strosek.opis %>
+</p>
+
+<p>
+  <strong>Uporabnik:</strong>
+  <%= @strosek.uporabnik %>
+</p>
+
+<%= link_to 'Edit', edit_strosek_path(@strosek) %> |
+<%= link_to 'Back', stroseks_path %>
