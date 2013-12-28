@@ -61,7 +61,7 @@
       <file leaf-file-name="20131228125813_add_rows_to_posta.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20131228125813_add_rows_to_posta.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="50" selection-start="219" selection-end="219" vertical-scroll-proportion="0.21356784" vertical-offset="0" max-vertical-offset="398">
+            <state line="3" column="39" selection-start="117" selection-end="117" vertical-scroll-proportion="0.1281407" vertical-offset="0" max-vertical-offset="398">
               <folding />
             </state>
           </provider>
@@ -783,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131228125813_add_rows_to_posta.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="50" selection-start="219" selection-end="219" vertical-scroll-proportion="0.21356784" vertical-offset="0" max-vertical-offset="398">
+        <state line="3" column="39" selection-start="117" selection-end="117" vertical-scroll-proportion="0.1281407" vertical-offset="0" max-vertical-offset="398">
           <folding />
         </state>
       </provider>
