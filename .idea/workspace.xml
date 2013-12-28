@@ -43,7 +43,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="3" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+            <state line="46" column="0" selection-start="1173" selection-end="1250" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
@@ -61,7 +61,7 @@
       <file leaf-file-name="20131228125813_add_rows_to_posta.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20131228125813_add_rows_to_posta.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="565" column="48" selection-start="20296" selection-end="20296" vertical-scroll-proportion="0.6155779" vertical-offset="9360" max-vertical-offset="9758">
+            <state line="576" column="63" selection-start="20470" selection-end="20470" vertical-scroll-proportion="0.8291457" vertical-offset="9462" max-vertical-offset="9945">
               <folding />
             </state>
           </provider>
@@ -735,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="3" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131226142332_create_posta.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="18" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -781,9 +774,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1173" selection-end="1250" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131228125813_add_rows_to_posta.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="565" column="48" selection-start="20296" selection-end="20296" vertical-scroll-proportion="0.6155779" vertical-offset="9360" max-vertical-offset="9758">
+        <state line="576" column="63" selection-start="20470" selection-end="20470" vertical-scroll-proportion="0.8291457" vertical-offset="9462" max-vertical-offset="9945">
           <folding />
         </state>
       </provider>

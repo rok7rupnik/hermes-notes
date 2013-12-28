@@ -1,7 +1,12 @@
 #encoding: utf-8
 class AddRowsToPosta < ActiveRecord::Migration
   def self.up
-    execute "INSERT INTO posta (\"postnaSt\", \"naziv\") VALUES
+    if Rails.env.production?
+      s = "\""
+    else
+      s = ""
+    end
+    execute "INSERT INTO posta (" + s + "postnaSt" + s + ", naziv) VALUES
               (1000, 'Ljubljana'),
               (1001, 'Ljubljana - poštni predali'),
               (1002, 'Ljubljana'),
@@ -560,9 +565,15 @@ class AddRowsToPosta < ActiveRecord::Migration
               (9502, 'Radenci'),
               (9600, 'Murska Sobota'),
               (9999, 'NI_POSTE')"
+
   end
 
   def self.down
-    execute "DELETE FROM posta WHERE \"postnaSt\" > 999"
+    if Rails.env.production?
+      s = "\""
+    else
+      s = ""
+    end
+    execute "DELETE FROM posta WHERE " + s + "postnaSt" + s + " > 999"
   end
 end
