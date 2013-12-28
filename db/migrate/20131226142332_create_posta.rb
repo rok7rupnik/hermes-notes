@@ -5,10 +5,6 @@ class CreatePosta < ActiveRecord::Migration
       t.string :naziv
 
       t.timestamps
-
-      execute "INSERT INTO posta (postnaSt, naziv) VALUES
-              (1000, 'Ljubljana')
-              "
     end
   end
 end
