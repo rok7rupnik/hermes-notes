@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: Hermes-notes_development
+  database: hermes-notes_development
   pool: 5
   username: root
   password: RokRupnik_SP
@@ -23,10 +23,10 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: Hermes-notes_test
+  database: hermes-notes_test
   pool: 5
   username: root
-  password:
+  password: RokRupnik_SP
   host: localhost
 
 production:
