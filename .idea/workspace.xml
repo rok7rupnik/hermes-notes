@@ -26,20 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="uporabnik.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/uporabnik.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="5" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="629">
-              <folding>
-                <marker date="1388138877249" expanded="true" signature="15:910" placeholder=" ... end" />
-                <marker date="1388138877249" expanded="true" signature="586:644" placeholder="#..." />
-                <marker date="1388138877249" expanded="true" signature="719:860" placeholder=" ... end" />
-                <marker date="1388138877249" expanded="true" signature="878:905" placeholder=" ... end" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,10 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20131228125813_add_rows_to_posta.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20131228125813_add_rows_to_posta.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20131228125813_add_rows_to_posta.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="576" column="63" selection-start="20470" selection-end="20470" vertical-scroll-proportion="0.8291457" vertical-offset="9462" max-vertical-offset="9945">
+            <state line="0" column="16" selection-start="0" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9945">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="static_pages_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="10" selection-start="62" selection-end="62" vertical-scroll-proportion="0.042713568" vertical-offset="0" max-vertical-offset="398">
               <folding />
             </state>
           </provider>
@@ -455,10 +450,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="20" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
           <folding>
-            <marker date="1388138877249" expanded="true" signature="15:910" placeholder=" ... end" />
-            <marker date="1388138877249" expanded="true" signature="586:644" placeholder="#..." />
-            <marker date="1388138877249" expanded="true" signature="719:860" placeholder=" ... end" />
-            <marker date="1388138877249" expanded="true" signature="878:905" placeholder=" ... end" />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder=" ... end" />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder="#..." />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder=" ... end" />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder=" ... end" />
           </folding>
         </state>
       </provider>
@@ -713,10 +708,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="5" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="629">
           <folding>
-            <marker date="1388138877249" expanded="true" signature="15:910" placeholder=" ... end" />
-            <marker date="1388138877249" expanded="true" signature="586:644" placeholder="#..." />
-            <marker date="1388138877249" expanded="true" signature="719:860" placeholder=" ... end" />
-            <marker date="1388138877249" expanded="true" signature="878:905" placeholder=" ... end" />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder=" ... end" />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder="#..." />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder=" ... end" />
+            <marker date="1388138877249" expanded="true" signature="-1:-1" placeholder=" ... end" />
           </folding>
         </state>
       </provider>
@@ -783,7 +778,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131228125813_add_rows_to_posta.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="576" column="63" selection-start="20470" selection-end="20470" vertical-scroll-proportion="0.8291457" vertical-offset="9462" max-vertical-offset="9945">
+        <state line="0" column="16" selection-start="0" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="62" selection-end="62" vertical-scroll-proportion="0.042713568" vertical-offset="0" max-vertical-offset="398">
           <folding />
         </state>
       </provider>
