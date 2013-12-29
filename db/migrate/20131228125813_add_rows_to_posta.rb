@@ -6,7 +6,7 @@ class AddRowsToPosta < ActiveRecord::Migration
     else
       s = ""
     end
-    execute "INSERT INTO posta (" + s + "postnaSt" + s + ", naziv) VALUES
+    execute "INSERT INTO posta (#{s}postnaSt#{s}, naziv) VALUES
               (1000, 'Ljubljana'),
               (1001, 'Ljubljana - poštni predali'),
               (1002, 'Ljubljana'),
@@ -574,6 +574,6 @@ class AddRowsToPosta < ActiveRecord::Migration
     else
       s = ""
     end
-    execute "DELETE FROM posta WHERE " + s + "postnaSt" + s + " > 999"
+    execute "DELETE FROM posta WHERE #{s}postnaSt#{s} > 999"
   end
 end
