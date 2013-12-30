@@ -16,7 +16,10 @@ class Uporabnik < ActiveRecord::Base
   # TODO: Potrditev gesla še ne dela!
 
   # Kriptiranje gesla
-  before_save :encrypt_geslo
+  before_save do |variable|
+    self.email = email.downcase
+    :encrypt_geslo
+  end
   after_save :clear_geslo
   def encrypt_geslo
     if geslo.present?
