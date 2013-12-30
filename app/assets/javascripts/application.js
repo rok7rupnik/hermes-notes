@@ -123,10 +123,14 @@ $(document).ready(function(){
      });*/
     fixBanner(false);
 
-    $("#sloBTN").click(function(){
+    $("body").on('show', function(){
+        fixBanner(false);
+    });
+
+    /*$("#sloBTN").click(function(){
         langLoad("sl");
     });
     $("#engBTN").click(function(){
         langLoad("en");
-    });
+    });*/
 });

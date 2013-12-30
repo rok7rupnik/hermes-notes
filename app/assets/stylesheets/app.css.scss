@@ -1,0 +1,169 @@
+@import "bootstrap";
+
+/* variables */
+$radius_big: 25px;
+$radius_small: 15px;
+$mainW: 60%;
+$headerH: 20px;
+$footerH: 15px;
+$edgePadding: 19%;
+
+
+$svetloRjava: #E6B368;
+$srednjeSvetloRjava: #e6a13a;
+$osnovnaRjava: #E6A13A;
+$srednjeTemnoRjava: #996b27;
+$temnoRjava: #844F00;
+
+$svetloRumena: #E6C568;
+$srednjeSvetloRumena: #e6b93a;
+$osnovnaRumena: #cd9700;
+$srednjeTemnoRumena: #997b27;
+$temnoRumena: #846200;
+
+$svetloOranzna: #E69B68;
+$srednjeSvetloOranzna: #e67f3a;
+$osnovnaOranzna: #cd5300;
+$srednjeTemnoOranzna: #995527;
+$temnoOranzna: #843500;
+
+$svetloModra: #6090c2;
+$srednjeSvetloModra: #3c7ec2;
+$osnovnaModra: #0a4785;
+$srednjeTemnoModra: #1f4164;
+$temnoModra: #032c56;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  text-align: center;
+}
+
+body{
+
+  height: 99%;
+}
+
+#main{
+  /*min-width: 800px;*/
+  width: $mainW;
+  padding-bottom: 50px;
+}
+
+header
+{
+  /*width: 95%;*/
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  background-color: $temnoRjava;
+  color: $osnovnaRjava;
+  border-bottom: 2px solid;
+
+  min-height: $headerH;
+
+  a{
+    color: $osnovnaRjava;
+  }
+
+  #logo {
+    float: left;
+    padding-left: $edgePadding;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  nav{
+    float: right;
+    padding-right: $edgePadding;
+    a{
+      padding: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      &:hover{
+        background-color: $osnovnaRjava;
+        border-radius: 5px;
+        /*color: $osnovnaTemna;*/
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  width: $mainW;
+
+  color: $svetloRjava;
+  border-top: 1px solid;
+  small {
+    color: $svetloRjava;
+    float: left;
+  }
+
+  a{
+    color: $svetloRjava;
+    &:hover{
+      color: $temnoRjava;
+    }
+  }
+
+  nav {
+    float: right;
+    a{
+      margin-left: 10px;
+    }
+  }
+}
+
+#footer_space{
+  min-height: 68%;
+}
+
+a{
+  color: $srednjeSvetloModra;
+  font-weight: bold;
+  text-underline-position: below;
+  /*text-shadow: 2px 2px 2px #fff;*/
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.banner
+{
+  position: absolute;
+  z-index: -1;
+
+  width: 99%;
+
+  background-color: $svetloRjava;
+  /* opacity:0.6; */
+}
+
+.box
+{
+  border:2px solid;
+  padding: 15px;
+
+  border-radius:$radius_big;
+  box-shadow: 7px 7px 7px $svetloOranzna;
+
+  background-color: $osnovnaRjava;
+}
+
+.dark_box{
+  border:2px solid;
+  padding: 15px;
+  border-radius:25px;
+  box-shadow: 7px 7px 7px ;
+
+  background-color: $temnoRjava;
+  color: $osnovnaRjava;
+}

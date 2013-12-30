@@ -55,7 +55,7 @@ function vAlign(childSelector, parentSelector, animate){
 
 function fixBanner(animate){
 	// .height() ne vrne vedno prave velikosti - uporabi [0].offsetHeight
-	var mainH = ($(".main")[0].offsetHeight - 15) + "px";
-	$(".banner").css("height", mainH);
-	vAlign(".banner", ".main", animate);
+	var mainH = ($("#main")[0].offsetHeight - 15) + "px";
+	$("#banner").css("height", mainH);
+	vAlign("#banner", "#main", animate);
 }

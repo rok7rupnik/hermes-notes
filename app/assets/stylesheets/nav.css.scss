@@ -1,0 +1,59 @@
+nav#navbar
+{
+  width: 700px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+a.nav
+{
+  color: #E6B93A;
+}
+
+span.nav
+{
+  width: 120px;
+  height: 18px;
+
+  border:2px solid;
+  padding: 15px;
+  margin: -3px;
+
+  border-radius: 15px;
+  box-shadow: 7px 7px 7px #E69B68;
+
+  display: inline-block;
+}
+span.dropdown
+{
+  position: absolute;
+  top:50px;
+
+  display: none;
+}
+span.vnos_racunov:hover ~ span.vnos_racunov_dropdown, span.vnos_racunov_dropdown:hover
+{
+  display: inline-block;
+}
+span.vnos_stroskov:hover ~ span.vnos_stroskov_dropdown, span.vnos_stroskov_dropdown:hover
+{
+  display: inline-block;
+}
+span.pregled_racunov:hover ~ span.pregled_racunov_dropdown, span.pregled_racunov_dropdown:hover
+{
+  display: inline-block;
+}
+span.pregled_financ:hover ~ span.pregled_financ_dropdown, span.pregled_financ_dropdown:hover
+{
+  display: inline-block;
+}
+
+span.vnos_racunov_dropdown
+{
+  /*top:50px;*/
+}
+
+span.vnos_stroskov_dropdown
+{
+  /*top:50px;*/
+}

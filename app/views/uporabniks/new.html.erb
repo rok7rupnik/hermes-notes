@@ -1,6 +1,6 @@
-<h1>Registracija novega uporabnika</h1>
+<% provide(:title, "Prijava") %>
 
-<% @page_title = "Registracija | Hermes-notes" %>
+<h1>Registracija novega uporabnika</h1>
 <div class="prijava_div">
   <%= form_for(:uporabnik, :url => {:controller => 'uporabniks', :action => 'create'}) do |f| %>
       <p> Email:</p> <%= f.text_field :email%>
