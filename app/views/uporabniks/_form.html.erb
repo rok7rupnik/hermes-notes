@@ -1,61 +1,55 @@
 <%= form_for(@uporabnik) do |f| %>
-  <% if @uporabnik.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@uporabnik.errors.count, "error") %> prohibited this uporabnik from being saved:</h2>
 
-      <ul>
-      <% @uporabnik.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :ime %><br>
-    <%= f.text_field :ime %>
-  </div>
-  <div class="field">
-    <%= f.label :priimek %><br>
-    <%= f.text_field :priimek %>
-  </div>
-  <div class="field">
-    <%= f.label :nazivPodjetja %><br>
-    <%= f.text_field :nazivPodjetja %>
-  </div>
-  <div class="field">
-    <%= f.label :naslov %><br>
-    <%= f.text_field :naslov %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :telefon %><br>
-    <%= f.text_field :telefon %>
-  </div>
-  <div class="field">
-    <%= f.label :davcna %><br>
-    <%= f.text_field :davcna %>
-  </div>
-  <div class="field">
-    <%= f.label :trr %><br>
-    <%= f.text_field :trr %>
-  </div>
-  <div class="field">
-    <%= f.label :ddv %><br>
-    <%= f.check_box :ddv %>
-  </div>
-  <div class="field">
-    <%= f.label :geslo %><br>
-    <%= f.text_field :geslo %>
-  </div>
-  <div class="field">
-    <%= f.label :posta_id %><br>
-    <%= f.text_field :posta_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :geslo %>
+      <%= f.password_field :geslo %>
+    </div>
+    <div class="field">
+      <%= f.label :geslo_confirmation %>
+      <%= f.password_field :geslo_confirmation %>
+    </div>
+    <div class="field">
+        <%= f.label :ime %>
+        <%= f.text_field :ime %>
+    </div>
+    <div class="field">
+        <%= f.label :priimek %>
+        <%= f.text_field :priimek %>
+    </div>
+    <div class="field">
+        <%= f.label :nazivPodjetja %>
+        <%= f.text_field :nazivPodjetja %>
+    </div>
+    <div class="field">
+        <%= f.label :naslov %>
+        <%= f.text_field :naslov %>
+    </div>
+    <div class="field">
+      <%= f.label :posta_id %>
+      <%= f.text_field :posta_id %>
+    </div>
+    <div class="field">
+        <%= f.label :telefon %>
+        <%= f.text_field :telefon %>
+    </div>
+    <div class="field">
+        <%= f.label :davcna %>
+        <%= f.text_field :davcna %>
+    </div>
+    <div class="field">
+        <%= f.label :trr %>
+        <%= f.text_field :trr %>
+    </div>
+    <div class="field">
+        <%= f.label :ddv %>
+        <%= f.check_box :ddv %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+    <%= render 'shared/error_messages' %>
 <% end %>

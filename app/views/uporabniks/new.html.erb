@@ -1,20 +1,7 @@
 <% provide(:title, "Prijava") %>
 
-<h1>Registracija novega uporabnika</h1>
-<div class="prijava_div">
-  <%= form_for(:uporabnik, :url => {:controller => 'uporabniks', :action => 'create'}) do |f| %>
-      <p> Email:</p> <%= f.text_field :email%>
-      <p> Geslo:</p> <%= f.password_field :geslo%>
-      <p> Potrdi geslo:</p> <%= f.password_field :geslo_confirmation%> <br/>
-      <%= f.submit :Registracija %>
-  <% end %>
-  <% if @uporabnik.errors.any? %>
-      <ul class="center error">
-        <% for message_error in @uporabnik.errors.full_messages %>
-            <li>* <%= message_error %></li>
-        <% end %>
-      </ul>
-  <% end %>
-</div>
+<h2>Registracija novega uporabnika</h2>
 
-<%= link_to 'Back', uporabniks_path %>
+<%= render 'form' %>
+
+<%= link_to 'Nazaj', root_path %>

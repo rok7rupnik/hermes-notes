@@ -1,3 +1,4 @@
+#encoding: utf-8
 class UporabniksController < ApplicationController
   before_action :set_uporabnik, only: [:show, :edit, :update, :destroy]
 
@@ -28,7 +29,7 @@ class UporabniksController < ApplicationController
 
     respond_to do |format|
       if @uporabnik.save
-        format.html { redirect_to @uporabnik, notice: 'Uporabnik was successfully created.' }
+        format.html { redirect_to @uporabnik, notice: 'Uporabnik je bil uspešno ustvarjen.' }
         format.json { render action: 'show', status: :created, location: @uporabnik }
       else
         format.html { render action: 'new' }
@@ -69,6 +70,6 @@ class UporabniksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def uporabnik_params
-      params.require(:uporabnik).permit(:ime, :priimek, :nazivPodjetja, :naslov, :email, :telefon, :davcna, :trr, :ddv, :geslo, :posta_id)
+      params.require(:uporabnik).permit(:ime, :priimek, :nazivPodjetja, :naslov, :email, :telefon, :davcna, :trr, :ddv, :geslo, :posta_id, :geslo_confirmation)
     end
 end

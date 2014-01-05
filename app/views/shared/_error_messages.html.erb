@@ -1,0 +1,9 @@
+<% if @uporabnik.errors.any? %>
+    <div id="">
+      <ul class="center error">
+        <% @uporabnik.errors.full_messages.each do |msg| %>
+            <li>* <%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

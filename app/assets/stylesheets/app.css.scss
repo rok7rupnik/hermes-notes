@@ -99,15 +99,15 @@ footer {
   padding-top: 5px;
   width: $mainW;
 
-  color: $svetloRjava;
+  color: $srednjeSvetloRjava;
   border-top: 1px solid;
   small {
-    color: $svetloRjava;
+    color: $srednjeSvetloRjava;
     float: left;
   }
 
   a{
-    color: $svetloRjava;
+    color: $srednjeSvetloRjava;
     &:hover{
       color: $temnoRjava;
     }
@@ -119,10 +119,6 @@ footer {
       margin-left: 10px;
     }
   }
-}
-
-#footer_space{
-  min-height: 68%;
 }
 
 a{

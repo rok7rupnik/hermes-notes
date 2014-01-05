@@ -1,18 +1,12 @@
-<h1>Listing uporabniks</h1>
+<h2>Vsi uporabniki</h2>
 
-<table>
+<table class="center">
   <thead>
     <tr>
       <th>Ime</th>
       <th>Priimek</th>
-      <th>Nazivpodjetja</th>
-      <th>Naslov</th>
+      <th>Naziv Podjetja</th>
       <th>Email</th>
-      <th>Telefon</th>
-      <th>Davcna</th>
-      <th>Trr</th>
-      <th>Ddv</th>
-      <th>Geslo</th>
       <th>Posta</th>
       <th></th>
       <th></th>
@@ -26,17 +20,11 @@
         <td><%= uporabnik.ime %></td>
         <td><%= uporabnik.priimek %></td>
         <td><%= uporabnik.nazivPodjetja %></td>
-        <td><%= uporabnik.naslov %></td>
         <td><%= uporabnik.email %></td>
-        <td><%= uporabnik.telefon %></td>
-        <td><%= uporabnik.davcna %></td>
-        <td><%= uporabnik.trr %></td>
-        <td><%= uporabnik.ddv %></td>
-        <td><%= uporabnik.geslo %></td>
-        <td><%= uporabnik.posta %></td>
-        <td><%= link_to 'Show', uporabnik %></td>
-        <td><%= link_to 'Edit', edit_uporabnik_path(uporabnik) %></td>
-        <td><%= link_to 'Destroy', uporabnik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= uporabnik.posta.postnaSt %></td>
+        <td><%= link_to 'Pokaži', uporabnik %></td>
+        <td><%= link_to 'Uredi', edit_uporabnik_path(uporabnik) %></td>
+        <td><%= link_to 'Zbriši', uporabnik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Uporabnik', new_uporabnik_path %>
+<%= link_to 'Nov Uporabnik', new_uporabnik_path %>
