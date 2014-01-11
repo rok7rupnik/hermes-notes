@@ -1,8 +1,22 @@
 <header class="">
-  <%= link_to "HERMES-NOTES", root_path, id: "logo" %>
+  <%=
+      link_to_if signed_in?, "HERMES-NOTES", "#", id: "logo" do
+        link_to "HERMES-NOTES", root_path, id: "logo"
+      end
+  %>
   <nav class="right">
-    <%= link_to "Domov",    root_path %>
+    <%=
+        link_to_if signed_in?, "Domov", "#" do
+            link_to "Domov",    root_path
+        end
+    %>
     <%= link_to "Pomoč",    help_path %>
-    <%= link_to "Prijava", '#' %>
+    <% if signed_in? %>
+        <span class="separator"></span>
+        <%= link_to "Moj profil", current_user %>
+        <%= link_to "Odjavi se", signout_path, method: "delete" %>
+    <% else %>
+        <%= link_to "Prijava",  signin_path %>
+    <% end %>
   </nav>
 </header>

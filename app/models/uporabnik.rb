@@ -6,16 +6,18 @@ class Uporabnik < ActiveRecord::Base
   has_many :strankas, :through => :racuns
   has_many :stroseks
 
-  attr_accessible :ime, :priimek, :nazivPodjetja, :naslov, :email, :telefon, :davcna, :trr, :ddv, :geslo, :posta_id, :geslo_confirmation
+  attr_accessible :ime, :priimek, :nazivPodjetja, :naslov, :email, :telefon, :davcna, :trr, :ddv, :password, :posta_id, :password_confirmation
 
+  has_secure_password
 
   # Validacije
   EMAIL_REGEX = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i
   validates :email, :uniqueness => true, :format => EMAIL_REGEX
-  validates :geslo, :length => { within: 5..40, messsage: " mora biti dolgo med 5 in 40 znakov." },
+  validates :password, :length => { within: 5..40, messsage: " mora biti dolgo med 5 in 40 znakov." },
                     confirmation: { message: " se ne ujema z " }
 
-  validates :ime, :priimek, :nazivPodjetja, :naslov, :posta_id, :email, :telefon, :davcna, :trr, :geslo, :geslo_confirmation, presence: { message: " je obvezno polje." };
+  validates :ime, :priimek, :nazivPodjetja, :naslov, :posta_id, :email, :telefon, :davcna, :trr, :password, :password_confirmation, presence: { message: " je obvezno polje." };
+
   # TODO: Potrditev gesla še ne dela!
 
 
@@ -23,17 +25,34 @@ class Uporabnik < ActiveRecord::Base
   # Kriptiranje gesla
   before_save do |variable|
     self.email = email.downcase
-    encrypt_geslo
+    encrypt_password
   end
   after_save :clear_geslo
-  def encrypt_geslo
-    if geslo.present?
+  def encrypt_password
+    if password.present?
       self.salt = BCrypt::Engine.generate_salt
-      self.geslo= BCrypt::Engine.hash_secret(geslo, salt)
+      self.password_digest= BCrypt::Engine.hash_secret(password, salt)
     end
   end
   def clear_geslo
-    self.geslo = nil
+    self.password = nil
+    self.password_digest = nil
   end
 
+
+  # remember token
+  before_create :create_remember_token
+
+  def Uporabnik.new_remember_token
+    SecureRandom.urlsafe_base64
+  end
+
+  def Uporabnik.encrypt(token)
+    Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  private
+    def create_remember_token
+      self.remember_token = Uporabnik.encrypt(Uporabnik.new_remember_token)
+    end
 end

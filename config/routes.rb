@@ -1,23 +1,22 @@
 HermesNotes::Application.routes.draw do
+  resources :stroseks
+  resources :postavkas
+  resources :storitevs
+  resources :racuns
+  resources :strankas
+  resources :uporabniks
+  resources :posta
+  resources :sessions, only: [:new, :create, :destroy]
+
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup',  to: 'uporabniks#new',       via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
 
-  resources :stroseks
 
-  resources :postavkas
-
-  resources :storitevs
-
-  resources :racuns
-
-  resources :strankas
-
-  resources :uporabniks
-
-  resources :posta
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

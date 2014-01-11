@@ -47,12 +47,12 @@
 
 <p>
   <strong>Geslo:</strong>
-  <%= @uporabnik.geslo %>
+  <%= @uporabnik.password_digest %>
 </p>
 
 <p>
   <strong>Posta:</strong>
-  <%= @uporabnik.posta %>
+  <%= @uporabnik.posta.postnaSt %>
 </p>
 
 <%= link_to 'Uredi', edit_uporabnik_path(@uporabnik) %> |

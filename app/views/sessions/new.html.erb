@@ -1,0 +1,17 @@
+<% provide(:title, "Prijava") %>
+<h2>Prijava</h2>
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <br />
+    <%= f.submit "Prijava" %>
+<% end %>
+
+<p>Nov uporabnik? <%= link_to "Registrajte se!", signup_path %></p>
+
