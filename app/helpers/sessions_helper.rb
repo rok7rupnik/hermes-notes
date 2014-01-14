@@ -19,10 +19,24 @@ module SessionsHelper
     @current_user ||= Uporabnik.find_by(remember_token: remember_token)
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
   def sign_out
     current_user.update_attribute(:remember_token,
                                   Uporabnik.encrypt(Uporabnik.new_remember_token))
     cookies.delete(:remember_token)
+    session.delete(:return_to)
     self.current_user = nil
+  end
+
+  def redirect_back_or(default)
+    redirect_to session[:return_to] || default, notice: "Pozdravljeni v aplikaciji Hermes-notes!"
+    session.delete(:return_to)
+  end
+
+  def store_location
+    session[:return_to] = request.url if request.get?
   end
 end

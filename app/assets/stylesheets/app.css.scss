@@ -55,13 +55,12 @@ body{
 header
 {
   /*width: 95%;*/
-  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
 
   background-color: $temnoRjava;
   color: $osnovnaRjava;
-  border-bottom: 2px solid;
+  border-bottom: 4px solid;
 
   min-height: $headerH;
 
@@ -105,6 +104,45 @@ header
   }
 }
 
+div#noticeDIV{
+  margin-bottom: 20px;
+  margin-top: -4px;
+  background-color: $osnovnaRjava;
+  p#notice{
+    margin: 0;
+  }
+}
+
+div.pagination{
+  ul{
+    li{
+      a{
+        background-color: $osnovnaModra;
+        color: $osnovnaRjava;
+        border-color: $osnovnaModra;
+        &:hover{
+          background-color: $osnovnaRjava;
+          color: $osnovnaModra;
+        }
+      }
+    }
+    li.active{
+      a{
+        background-color: $osnovnaRjava;
+        color: $osnovnaModra;
+      }
+    }
+    li.disabled{
+      a{
+        color: #444;
+        &:hover{
+          color: #444;
+        }
+      }
+    }
+  }
+}
+
 footer {
   margin: 35px 0 10px 0;
   padding-top: 5px;
@@ -134,7 +172,7 @@ footer {
 }
 
 a{
-  color: $srednjeSvetloModra;
+  color: $osnovnaModra;
   font-weight: bold;
   text-underline-position: below;
   /*text-shadow: 2px 2px 2px #fff;*/

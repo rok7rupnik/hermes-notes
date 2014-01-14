@@ -10,13 +10,17 @@
             link_to "Domov",    root_path
         end
     %>
-    <%= link_to "Pomoč",    help_path %>
+    <%= link_to "Pomoč", help_path%>
     <% if signed_in? %>
         <span class="separator"></span>
+        <%= link_to "Uporabniki", uporabniks_path %>
         <%= link_to "Moj profil", current_user %>
-        <%= link_to "Odjavi se", signout_path, method: "delete" %>
+        <%= link_to "Odjavi se", signout_path, method: 'delete', data: { confirm: 'Ste prepričani?' } %>
     <% else %>
         <%= link_to "Prijava",  signin_path %>
     <% end %>
   </nav>
 </header>
+<div class="center" id="noticeDIV">
+  <p id="notice"><%= notice %></p>
+</div>

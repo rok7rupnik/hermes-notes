@@ -1,0 +1,13 @@
+<!-- html za prikaz enega uporabnika -->
+<tr>
+  <td><%= uporabnik.ime %></td>
+  <td><%= uporabnik.priimek %></td>
+  <td><%= uporabnik.nazivPodjetja %></td>
+  <td><%= uporabnik.email %></td>
+  <td><%= uporabnik.posta.postnaSt %></td>
+  <td><%= link_to 'Pokaži', uporabnik %></td>
+  <td><%= link_to 'Uredi', edit_uporabnik_path(uporabnik) %></td>
+  <% if current_user.admin? && !current_user?(uporabnik) %>
+    <td><%= link_to 'Zbriši', uporabnik, method: :delete, data: { confirm: 'Ste prepričani?' } %></td>
+  <% end %>
+</tr>

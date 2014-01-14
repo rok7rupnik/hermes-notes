@@ -1,11 +1,14 @@
 #encoding: utf-8
 class UporabniksController < ApplicationController
   before_action :set_uporabnik, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_uporabnik, only: [:show, :edit, :update, :destroy]
+  before_action :correct_uporabnik,   only: [:edit, :update]
+  before_action :admin_uporabnik,     only: :destroy
 
   # GET /uporabniks
   # GET /uporabniks.json
   def index
-    @uporabniks = Uporabnik.all
+    @uporabniks = Uporabnik.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /uporabniks/1
@@ -46,7 +49,7 @@ class UporabniksController < ApplicationController
   def update
     respond_to do |format|
       if @uporabnik.update(uporabnik_params)
-        format.html { redirect_to @uporabnik, notice: 'Uporabnik was successfully updated.' }
+        format.html { redirect_to @uporabnik, notice: 'Uspešno ste posodobili svoj profil.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -74,5 +77,21 @@ class UporabniksController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def uporabnik_params
       params.require(:uporabnik).permit(:ime, :priimek, :nazivPodjetja, :naslov, :email, :telefon, :davcna, :trr, :ddv, :password, :posta_id, :password_confirmation)
+    end
+
+    # Before filters
+
+    def signed_in_uporabnik
+      store_location
+      redirect_to signin_url, notice: "Prosimo, da se prijavite." unless signed_in?
+    end
+
+    def correct_uporabnik
+      @uporabnik = Uporabnik.find(params[:id])
+      redirect_to :back, notice: "Za izbrano stran nimate ustreznih pravic." unless (current_user?(@uporabnik) || current_user.admin?)
+    end
+
+    def admin_uporabnik
+      redirect_to(root_url) unless current_user.admin?
     end
 end

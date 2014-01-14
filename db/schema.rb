@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140109093411) do
+ActiveRecord::Schema.define(version: 20140114010927) do
 
   create_table "posta", force: true do |t|
     t.integer  "postnaSt"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 20140109093411) do
     t.string   "salt"
     t.string   "password_digest"
     t.string   "remember_token"
+    t.boolean  "admin",           default: false
   end
 
   add_index "uporabniks", ["email"], name: "index_uporabniks_on_email", unique: true, using: :btree

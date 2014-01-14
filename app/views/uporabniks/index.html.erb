@@ -1,4 +1,7 @@
+<% provide(:title, 'Vsi uporabniki') %>
 <h2>Vsi uporabniki</h2>
+
+<%= will_paginate %>
 
 <table class="center">
   <thead>
@@ -15,21 +18,12 @@
   </thead>
 
   <tbody>
-    <% @uporabniks.each do |uporabnik| %>
-      <tr>
-        <td><%= uporabnik.ime %></td>
-        <td><%= uporabnik.priimek %></td>
-        <td><%= uporabnik.nazivPodjetja %></td>
-        <td><%= uporabnik.email %></td>
-        <td><%= uporabnik.posta.postnaSt %></td>
-        <td><%= link_to 'Pokaži', uporabnik %></td>
-        <td><%= link_to 'Uredi', edit_uporabnik_path(uporabnik) %></td>
-        <td><%= link_to 'Zbriši', uporabnik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= render @uporabniks %>
   </tbody>
 </table>
 
 <br>
+
+<%= will_paginate %>
 
 <%= link_to 'Nov Uporabnik', new_uporabnik_path %>
